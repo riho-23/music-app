@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>音楽アプリ</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>音楽アプリ</h1>
+
+  <!-- 12キーのボタン -->
+  <div id="key-buttons">
+    <% const keys = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]; %>
+    <% keys.forEach(key => { %>
+      <button class="key-btn" data-key="<%= key %>"><%= key %></button>
+    <% }) %>
+  </div>
+
+  <!-- コード表示エリア -->
+  <div id="chord-container"></div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
